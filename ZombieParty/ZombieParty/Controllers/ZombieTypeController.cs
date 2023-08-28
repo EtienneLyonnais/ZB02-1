@@ -5,6 +5,13 @@ namespace ZombieParty.Controllers
 {
     public class ZombieTypeController : Controller
     {
+        private BaseDonnees _baseDonnees { get; set; }
+
+        public ZombieTypeController(BaseDonnees baseDonnees)
+        {
+            _baseDonnees = baseDonnees;
+        }
+
         public IActionResult Index()
         {
             this.ViewBag.MaListe = new List<ZombieType>()

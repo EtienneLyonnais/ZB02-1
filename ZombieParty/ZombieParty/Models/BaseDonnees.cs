@@ -5,6 +5,7 @@
         public Guid idInstance { get; set; }
         public List<ZombieType> ZombieTypes { get; set; }
         public List<Zombie> Zombies { get; set; }
+        public List<Weapon> Weapons { get; set; }
 
         public BaseDonnees()
         {
@@ -13,6 +14,13 @@
             //Initialiser des listes vides
             Zombies = new List<Zombie>();
             ZombieTypes = new List<ZombieType>();
+            Weapons = new List<Weapon>();
+
+…
+        //Remplir la liste des Weapons
+        Weapons.Add(new Weapon() { Name = "Leopold", Description = "This is to cut your friendly zombies", Force = 200, Image = "https://i.ibb.co/y5nCnXT/dagger-gfce31e967-1920.png", Price = 421, Qty = 21, QtyBought = 3, CreatedDate = new DateTime(1999, 01, 1) });
+            Weapons.Add(new Weapon() { Name = "Master Shield", Description = "An awesome Stainless Steel Shield", Force = 10, Image = "https://publicdomainvectors.org/photos/Shield-ClassicMedieval1.png", Price = 500, Qty = 30, QtyBought = 1, CreatedDate = new DateTime(1999, 01, 1) });
+
 
             //Remplir la liste des ZombieTypes
             {
